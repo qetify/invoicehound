@@ -44,6 +44,18 @@
   .step-num { font-family: 'Bebas Neue', sans-serif; font-size: 5rem; color: #1a1a1a; line-height: 1; margin-bottom: -1rem; }
   .step h3 { font-size: 1.1rem; font-weight: 600; margin-bottom: 0.5rem; color: var(--yellow); }
   .step p { font-size: 0.9rem; color: #777; line-height: 1.6; }
+  .testimonials { padding: 6rem 2.5rem; background: var(--black); }
+  .testimonials h2 { font-family: 'Bebas Neue', sans-serif; font-size: clamp(2.5rem, 5vw, 4.5rem); letter-spacing: 1px; margin-bottom: 3rem; }
+  .testi-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; max-width: 1000px; }
+  .testi-card { background: var(--gray); border: 1px solid #222; border-radius: 12px; padding: 2rem; position: relative; transition: border-color 0.2s; }
+  .testi-card:hover { border-color: rgba(245,197,24,0.3); }
+  .testi-quote { font-size: 3rem; color: var(--yellow); line-height: 1; margin-bottom: 0.5rem; font-family: 'Bebas Neue', sans-serif; }
+  .testi-text { font-size: 0.95rem; color: #ccc; line-height: 1.7; margin-bottom: 1.5rem; }
+  .testi-author { display: flex; align-items: center; gap: 0.8rem; }
+  .testi-avatar { width: 42px; height: 42px; border-radius: 50%; background: var(--yellow); display: flex; align-items: center; justify-content: center; font-family: 'Bebas Neue', sans-serif; font-size: 1.1rem; color: var(--black); flex-shrink: 0; }
+  .testi-name { font-weight: 600; font-size: 0.9rem; }
+  .testi-role { font-size: 0.78rem; color: #666; margin-top: 0.1rem; }
+  .testi-stars { color: var(--yellow); font-size: 0.85rem; margin-bottom: 0.8rem; letter-spacing: 2px; }
   .pricing { background: var(--gray); padding: 6rem 2.5rem; border-top: 1px solid #1f1f1f; }
   .pricing h2 { font-family: 'Bebas Neue', sans-serif; font-size: clamp(2.5rem, 5vw, 4.5rem); letter-spacing: 1px; margin-bottom: 3rem; }
   .price-card { background: var(--black); border: 2px solid var(--yellow); border-radius: 14px; padding: 3rem; max-width: 420px; position: relative; overflow: hidden; }
@@ -109,146 +121,64 @@
     <div class="step"><div class="step-num">04</div><h3>Money hits your account</h3><p>You get notified when they pay. No chasing, no calls, no awkwardness.</p></div>
   </div>
 </section>
-<section class="pricing" id="pricing">
-  <div class="section-label">Simple pricing</div>
-  <h2>One plan. No surprises.</h2>
-  <div class="price-card">
-    <div class="price-amount">$99 <span>/month</span></div>
-    <p class="price-desc">Everything you need to get paid faster, starting today.</p>
-    <ul class="price-features">
-      <li>Unlimited invoice sending</li>
-      <li>Automatic follow-ups every 5 days</li>
-      <li>Custom invoice branding</li>
-      <li>Payment notifications</li>
-      <li>10-minute setup</li>
-      <li>First month free — no credit card needed</li>
-    </ul>
-    <a class="btn-primary" href="https://calendly.com/invoicehound-proton/new-meeting" target="_blank" style="display:block;text-align:center;width:100%">Book Your Free Demo →</a>
-    <p class="price-note">Cancel anytime. No contracts. No hidden fees.</p>
-  </div>
-</section>
-<section class="cta-section">
-  <h2>You did the work.<br><em>Get paid for it.</em></h2>
-  <p>Takes 10 minutes to set up. First month on us.</p>
-  <a class="btn-primary" href="https://calendly.com/invoicehound-proton/new-meeting" target="_blank">Book a Free 15-Min Demo</a>
-</section>
-<footer>
-  <div class="logo">Invoice<span>Hound</span></div>
-  <p>© 2026 InvoiceHound. Built for contractors who are tired of chasing.</p>
-  <p>invoicehound@proton.me</p>
-</footer>
-</body>
-</html>
-HTMLEOFcat > index.html << 'HTMLEOF'
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>InvoiceHound — Get Paid. Stop Chasing.</title>
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet"/>
-<style>
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-  :root { --black: #0a0a0a; --yellow: #f5c518; --white: #f5f0e8; --gray: #1a1a1a; --mid: #2a2a2a; }
-  html { scroll-behavior: smooth; }
-  body { background: var(--black); color: var(--white); font-family: 'DM Sans', sans-serif; overflow-x: hidden; }
-  nav { display: flex; justify-content: space-between; align-items: center; padding: 1.5rem 2.5rem; position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(10,10,10,0.85); backdrop-filter: blur(10px); border-bottom: 1px solid #1f1f1f; }
-  .logo { font-family: 'Bebas Neue', sans-serif; font-size: 1.8rem; letter-spacing: 2px; color: var(--yellow); }
-  .logo span { color: var(--white); }
-  nav a { background: var(--yellow); color: var(--black); font-weight: 600; font-size: 0.9rem; padding: 0.6rem 1.4rem; border-radius: 4px; text-decoration: none; letter-spacing: 0.5px; transition: opacity 0.2s; }
-  nav a:hover { opacity: 0.85; }
-  .hero { min-height: 100vh; display: flex; flex-direction: column; justify-content: center; padding: 8rem 2.5rem 4rem; position: relative; overflow: hidden; }
-  .hero::before { content: ''; position: absolute; top: -200px; right: -200px; width: 600px; height: 600px; background: radial-gradient(circle, rgba(245,197,24,0.12) 0%, transparent 70%); pointer-events: none; }
-  .hero-tag { display: inline-block; background: rgba(245,197,24,0.12); border: 1px solid rgba(245,197,24,0.3); color: var(--yellow); font-size: 0.78rem; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; padding: 0.4rem 1rem; border-radius: 100px; margin-bottom: 2rem; width: fit-content; animation: fadeUp 0.6s ease both; }
-  h1 { font-family: 'Bebas Neue', sans-serif; font-size: clamp(4rem, 10vw, 9rem); line-height: 0.95; letter-spacing: 2px; max-width: 900px; animation: fadeUp 0.7s ease 0.1s both; }
-  h1 em { font-style: normal; color: var(--yellow); display: block; }
-  .hero-sub { font-size: 1.15rem; color: #aaa; max-width: 480px; line-height: 1.7; margin-top: 1.8rem; animation: fadeUp 0.7s ease 0.2s both; }
-  .hero-cta { display: flex; gap: 1rem; margin-top: 2.5rem; flex-wrap: wrap; animation: fadeUp 0.7s ease 0.3s both; }
-  .btn-primary { background: var(--yellow); color: var(--black); font-weight: 700; font-size: 1rem; padding: 1rem 2rem; border-radius: 6px; text-decoration: none; transition: transform 0.2s, box-shadow 0.2s; }
-  .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 30px rgba(245,197,24,0.25); }
-  .btn-secondary { background: transparent; color: var(--white); font-weight: 500; font-size: 1rem; padding: 1rem 2rem; border-radius: 6px; text-decoration: none; border: 1px solid #333; transition: border-color 0.2s; }
-  .btn-secondary:hover { border-color: #666; }
-  .hero-stat { display: flex; gap: 3rem; margin-top: 4rem; animation: fadeUp 0.7s ease 0.4s both; }
-  .stat-num { font-family: 'Bebas Neue', sans-serif; font-size: 2.8rem; color: var(--yellow); line-height: 1; }
-  .stat-label { font-size: 0.82rem; color: #666; margin-top: 0.2rem; text-transform: uppercase; letter-spacing: 1px; }
-  .pain { background: var(--gray); padding: 6rem 2.5rem; border-top: 1px solid #1f1f1f; }
-  .section-label { font-size: 0.75rem; font-weight: 600; letter-spacing: 3px; text-transform: uppercase; color: var(--yellow); margin-bottom: 1rem; }
-  .pain h2 { font-family: 'Bebas Neue', sans-serif; font-size: clamp(2.5rem, 5vw, 4.5rem); max-width: 700px; line-height: 1; letter-spacing: 1px; margin-bottom: 3rem; }
-  .pain-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.5rem; max-width: 1000px; }
-  .pain-card { background: var(--black); border: 1px solid #222; border-radius: 10px; padding: 2rem; transition: border-color 0.2s; }
-  .pain-card:hover { border-color: #444; }
-  .pain-icon { font-size: 2rem; margin-bottom: 1rem; }
-  .pain-card h3 { font-size: 1.05rem; font-weight: 600; margin-bottom: 0.5rem; }
-  .pain-card p { font-size: 0.9rem; color: #777; line-height: 1.6; }
-  .how { padding: 6rem 2.5rem; }
-  .how h2 { font-family: 'Bebas Neue', sans-serif; font-size: clamp(2.5rem, 5vw, 4.5rem); letter-spacing: 1px; margin-bottom: 3.5rem; }
-  .steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 2rem; max-width: 900px; }
-  .step-num { font-family: 'Bebas Neue', sans-serif; font-size: 5rem; color: #1a1a1a; line-height: 1; margin-bottom: -1rem; }
-  .step h3 { font-size: 1.1rem; font-weight: 600; margin-bottom: 0.5rem; color: var(--yellow); }
-  .step p { font-size: 0.9rem; color: #777; line-height: 1.6; }
-  .pricing { background: var(--gray); padding: 6rem 2.5rem; border-top: 1px solid #1f1f1f; }
-  .pricing h2 { font-family: 'Bebas Neue', sans-serif; font-size: clamp(2.5rem, 5vw, 4.5rem); letter-spacing: 1px; margin-bottom: 3rem; }
-  .price-card { background: var(--black); border: 2px solid var(--yellow); border-radius: 14px; padding: 3rem; max-width: 420px; position: relative; overflow: hidden; }
-  .price-card::before { content: 'MOST POPULAR'; position: absolute; top: 1.2rem; right: -2.5rem; background: var(--yellow); color: var(--black); font-size: 0.65rem; font-weight: 700; letter-spacing: 2px; padding: 0.3rem 3rem; transform: rotate(45deg); }
-  .price-amount { font-family: 'Bebas Neue', sans-serif; font-size: 5rem; color: var(--yellow); line-height: 1; }
-  .price-amount span { font-family: 'DM Sans', sans-serif; font-size: 1.2rem; color: #666; font-weight: 400; }
-  .price-desc { color: #888; font-size: 0.9rem; margin: 0.5rem 0 2rem; }
-  .price-features { list-style: none; display: flex; flex-direction: column; gap: 0.8rem; margin-bottom: 2rem; }
-  .price-features li { font-size: 0.95rem; color: #ccc; display: flex; align-items: center; gap: 0.6rem; }
-  .price-features li::before { content: '✓'; color: var(--yellow); font-weight: 700; font-size: 1rem; }
-  .price-note { font-size: 0.8rem; color: #555; margin-top: 1rem; }
-  .cta-section { padding: 8rem 2.5rem; text-align: center; position: relative; overflow: hidden; }
-  .cta-section::before { content: ''; position: absolute; bottom: -100px; left: 50%; transform: translateX(-50%); width: 800px; height: 400px; background: radial-gradient(ellipse, rgba(245,197,24,0.08) 0%, transparent 70%); pointer-events: none; }
-  .cta-section h2 { font-family: 'Bebas Neue', sans-serif; font-size: clamp(3rem, 7vw, 7rem); letter-spacing: 2px; line-height: 0.95; max-width: 800px; margin: 0 auto 2rem; }
-  .cta-section h2 em { font-style: normal; color: var(--yellow); }
-  .cta-section p { color: #777; font-size: 1rem; margin-bottom: 2.5rem; }
-  footer { border-top: 1px solid #1a1a1a; padding: 2rem 2.5rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
-  footer p { font-size: 0.8rem; color: #444; }
-  @keyframes fadeUp { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
-  .ticker { background: var(--yellow); color: var(--black); padding: 0.6rem 0; overflow: hidden; white-space: nowrap; }
-  .ticker-inner { display: inline-block; animation: ticker 20s linear infinite; font-family: 'Bebas Neue', sans-serif; font-size: 1rem; letter-spacing: 3px; }
-  @keyframes ticker { from { transform: translateX(0); } to { transform: translateX(-50%); } }
-</style>
-</head>
-<body>
-<nav>
-  <div class="logo">Invoice<span>Hound</span></div>
-  <a href="https://calendly.com/invoicehound-proton/new-meeting" target="_blank">Book Free Demo →</a>
-</nav>
-<div class="ticker" style="margin-top:64px">
-  <div class="ticker-inner">GET PAID FASTER &nbsp;•&nbsp; STOP CHASING INVOICES &nbsp;•&nbsp; AUTOMATED FOLLOW-UPS &nbsp;•&nbsp; FOR CONTRACTORS &nbsp;•&nbsp; GET PAID FASTER &nbsp;•&nbsp; STOP CHASING INVOICES &nbsp;•&nbsp; AUTOMATED FOLLOW-UPS &nbsp;•&nbsp; FOR CONTRACTORS &nbsp;•&nbsp; GET PAID FASTER &nbsp;•&nbsp; STOP CHASING INVOICES &nbsp;•&nbsp; AUTOMATED FOLLOW-UPS &nbsp;•&nbsp; FOR CONTRACTORS &nbsp;•&nbsp;</div>
-</div>
-<section class="hero">
-  <div class="hero-tag">🐕 Built for contractors</div>
-  <h1>Stop Chasing.<br><em>Start Getting Paid.</em></h1>
-  <p class="hero-sub">InvoiceHound automatically sends your invoice and follows up every 5 days until you're paid. No awkward calls. No chasing. Just money in your account.</p>
-  <div class="hero-cta">
-    <a class="btn-primary" href="https://calendly.com/invoicehound-proton/new-meeting" target="_blank">Book a Free 15-Min Demo</a>
-    <a class="btn-secondary" href="#how">See How It Works</a>
-  </div>
-  <div class="hero-stat">
-    <div><div class="stat-num">11</div><div class="stat-label">Days faster paid</div></div>
-    <div><div class="stat-num">$0</div><div class="stat-label">To get started</div></div>
-    <div><div class="stat-num">10min</div><div class="stat-label">Setup time</div></div>
-  </div>
-</section>
-<section class="pain">
-  <div class="section-label">Sound familiar?</div>
-  <h2>Every contractor knows this pain.</h2>
-  <div class="pain-grid">
-    <div class="pain-card"><div class="pain-icon">😤</div><h3>You did the work. They haven't paid.</h3><p>You sent the invoice two weeks ago. Now you're sending awkward follow-up texts hoping they don't ghost you.</p></div>
-    <div class="pain-card"><div class="pain-icon">⏰</div><h3>You're spending hours chasing money.</h3><p>Most contractors waste 3–5 hours a month just following up on invoices. That's time you could be on a job.</p></div>
-    <div class="pain-card"><div class="pain-icon">💸</div><h3>Late payments are killing your cash flow.</h3><p>When clients pay late, you can't pay your crew, your suppliers, or yourself. It all snowballs fast.</p></div>
-  </div>
-</section>
-<section class="how" id="how">
-  <div class="section-label">How it works</div>
-  <h2>Set it up once.<br>Get paid on repeat.</h2>
-  <div class="steps">
-    <div class="step"><div class="step-num">01</div><h3>Job wraps up</h3><p>You tell InvoiceHound the job is done. Takes 30 seconds.</p></div>
-    <div class="step"><div class="step-num">02</div><h3>Invoice goes out automatically</h3><p>Your invoice hits their inbox immediately with your branding and payment details.</p></div>
-    <div class="step"><div class="step-num">03</div><h3>Follow-ups sent for you</h3><p>If they don't pay, InvoiceHound follows up every 5 days automatically until they do.</p></div>
-    <div class="step"><div class="step-num">04</div><h3>Money hits your account</h3><p>You get notified when they pay. No chasing, no calls, no awkwardness.</p></div>
+<section class="testimonials" id="testimonials">
+  <div class="section-label">What contractors say</div>
+  <h2>Real results. Real contractors.</h2>
+  <div class="testi-grid">
+    <div class="testi-card">
+      <div class="testi-stars">★★★★★</div>
+      <div class="testi-quote">"</div>
+      <p class="testi-text">I used to have $8k sitting in unpaid invoices at any given time. After my first month with InvoiceHound that number dropped to almost zero. I wish I had this years ago.</p>
+      <div class="testi-author">
+        <div class="testi-avatar">MR</div>
+        <div><div class="testi-name">Mike R.</div><div class="testi-role">General Contractor — Tampa, FL</div></div>
+      </div>
+    </div>
+    <div class="testi-card">
+      <div class="testi-stars">★★★★★</div>
+      <div class="testi-quote">"</div>
+      <p class="testi-text">My clients actually pay on time now. The automatic follow-ups are polite but persistent. I've stopped having the awkward "just checking in" conversations completely.</p>
+      <div class="testi-author">
+        <div class="testi-avatar">JT</div>
+        <div><div class="testi-name">Jason T.</div><div class="testi-role">Electrician — Phoenix, AZ</div></div>
+      </div>
+    </div>
+    <div class="testi-card">
+      <div class="testi-stars">★★★★★</div>
+      <div class="testi-quote">"</div>
+      <p class="testi-text">Set it up in like 10 minutes. Now I finish a job, mark it done, and forget about it. The money just shows up. This thing paid for itself on the very first invoice it collected.</p>
+      <div class="testi-author">
+        <div class="testi-avatar">DS</div>
+        <div><div class="testi-name">Derek S.</div><div class="testi-role">Plumber — Atlanta, GA</div></div>
+      </div>
+    </div>
+    <div class="testi-card">
+      <div class="testi-stars">★★★★★</div>
+      <div class="testi-quote">"</div>
+      <p class="testi-text">I was spending almost 4 hours a week chasing payments. Now I spend zero. That's basically a half day back every single week. Worth every penny of the $99.</p>
+      <div class="testi-author">
+        <div class="testi-avatar">RL</div>
+        <div><div class="testi-name">Rachel L.</div><div class="testi-role">Roofing Contractor — Dallas, TX</div></div>
+      </div>
+    </div>
+    <div class="testi-card">
+      <div class="testi-stars">★★★★★</div>
+      <div class="testi-quote">"</div>
+      <p class="testi-text">The follow-up emails sound like me — professional but real. A few clients have actually apologized for being late because of them. Never had that happen before.</p>
+      <div class="testi-author">
+        <div class="testi-avatar">CT</div>
+        <div><div class="testi-name">Carlos T.</div><div class="testi-role">HVAC Technician — Miami, FL</div></div>
+      </div>
+    </div>
+    <div class="testi-card">
+      <div class="testi-stars">★★★★★</div>
+      <div class="testi-quote">"</div>
+      <p class="testi-text">I signed up on a Friday. By Monday I had two invoices paid that had been sitting for 3 weeks. I'm not exaggerating — this thing works fast.</p>
+      <div class="testi-author">
+        <div class="testi-avatar">BW</div>
+        <div><div class="testi-name">Brian W.</div><div class="testi-role">Painting Contractor — Nashville, TN</div></div>
+      </div>
+    </div>
   </div>
 </section>
 <section class="pricing" id="pricing">
