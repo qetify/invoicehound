@@ -13,8 +13,11 @@
   nav { display: flex; justify-content: space-between; align-items: center; padding: 1.5rem 2.5rem; position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(10,10,10,0.85); backdrop-filter: blur(10px); border-bottom: 1px solid #1f1f1f; }
   .logo { font-family: 'Bebas Neue', sans-serif; font-size: 1.8rem; letter-spacing: 2px; color: var(--yellow); }
   .logo span { color: var(--white); }
-  nav a { background: var(--yellow); color: var(--black); font-weight: 600; font-size: 0.9rem; padding: 0.6rem 1.4rem; border-radius: 4px; text-decoration: none; letter-spacing: 0.5px; transition: opacity 0.2s; }
-  nav a:hover { opacity: 0.85; }
+  .nav-actions { display: flex; align-items: center; gap: 0.75rem; }
+  .nav-login { background: transparent; color: var(--white); font-weight: 500; font-size: 0.9rem; padding: 0.6rem 1.2rem; border-radius: 4px; text-decoration: none; border: 1px solid #333; transition: border-color 0.2s; letter-spacing: 0.5px; }
+  .nav-login:hover { border-color: #666; }
+  nav a.nav-demo { background: var(--yellow); color: var(--black); font-weight: 600; font-size: 0.9rem; padding: 0.6rem 1.4rem; border-radius: 4px; text-decoration: none; letter-spacing: 0.5px; transition: opacity 0.2s; }
+  nav a.nav-demo:hover { opacity: 0.85; }
   .hero { min-height: 100vh; display: flex; flex-direction: column; justify-content: center; padding: 8rem 2.5rem 4rem; position: relative; overflow: hidden; }
   .hero::before { content: ''; position: absolute; top: -200px; right: -200px; width: 600px; height: 600px; background: radial-gradient(circle, rgba(245,197,24,0.12) 0%, transparent 70%); pointer-events: none; }
   .hero-tag { display: inline-block; background: rgba(245,197,24,0.12); border: 1px solid rgba(245,197,24,0.3); color: var(--yellow); font-size: 0.78rem; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; padding: 0.4rem 1rem; border-radius: 100px; margin-bottom: 2rem; width: fit-content; animation: fadeUp 0.6s ease both; }
@@ -83,7 +86,10 @@
 <body>
 <nav>
   <div class="logo">Invoice<span>Hound</span></div>
-  <a href="https://calendly.com/invoicehound-proton/new-meeting" target="_blank">Book Free Demo →</a>
+  <div class="nav-actions">
+    <a href="https://invoicehound-app.vercel.app/dashboard" class="nav-login">Client Login</a>
+    <a href="https://calendly.com/invoicehound-proton/new-meeting" target="_blank" class="nav-demo">Book Free Demo →</a>
+  </div>
 </nav>
 <div class="ticker" style="margin-top:72px">
   <div class="ticker-inner">GET PAID FASTER &nbsp;•&nbsp; STOP CHASING INVOICES &nbsp;•&nbsp; AUTOMATED FOLLOW-UPS &nbsp;•&nbsp; FOR CONTRACTORS &nbsp;•&nbsp; GET PAID FASTER &nbsp;•&nbsp; STOP CHASING INVOICES &nbsp;•&nbsp; AUTOMATED FOLLOW-UPS &nbsp;•&nbsp; FOR CONTRACTORS &nbsp;•&nbsp; GET PAID FASTER &nbsp;•&nbsp; STOP CHASING INVOICES &nbsp;•&nbsp; AUTOMATED FOLLOW-UPS &nbsp;•&nbsp; FOR CONTRACTORS &nbsp;•&nbsp;</div>
